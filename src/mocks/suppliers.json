@@ -1,0 +1,274 @@
+{
+  "suppliers": [
+    {
+      "id": "s-001",
+      "name": "Apex Plumbing Ltd",
+      "registrationNumber": "APX-1001",
+      "country": "UK",
+      "categories": ["Plumbing", "Heating"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-01-12T09:00:00Z"
+    },
+    {
+      "id": "s-002",
+      "name": "Brightwire Electrical",
+      "registrationNumber": "BRW-2245",
+      "country": "UK",
+      "categories": ["Electrical"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-02-03T10:30:00Z"
+    },
+    {
+      "id": "s-003",
+      "name": "Cornerstone Builders",
+      "registrationNumber": "CNR-3319",
+      "country": "IE",
+      "categories": ["Building General", "Carpentry"],
+      "complianceStatus": "Pending",
+      "createdAt": "2024-02-18T14:15:00Z"
+    },
+    {
+      "id": "s-004",
+      "name": "Delta Roofing Services",
+      "registrationNumber": "DLT-4421",
+      "country": "UK",
+      "categories": ["Roofing"],
+      "complianceStatus": "NotVerified",
+      "createdAt": "2024-03-01T11:45:00Z"
+    },
+    {
+      "id": "s-005",
+      "name": "Eiffel Construction SA",
+      "registrationNumber": "EFL-5502",
+      "country": "FR",
+      "categories": ["Building General", "Concrete"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-03-05T08:20:00Z"
+    },
+    {
+      "id": "s-006",
+      "name": "Fuego Steelworks",
+      "registrationNumber": "FGO-6687",
+      "country": "ES",
+      "categories": ["Steel", "Welding"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-03-15T13:00:00Z"
+    },
+    {
+      "id": "s-007",
+      "name": "Granite Masonry Co",
+      "registrationNumber": "GRN-7713",
+      "country": "UK",
+      "categories": ["Masonry", "Stonework"],
+      "complianceStatus": "Pending",
+      "createdAt": "2024-03-22T15:30:00Z"
+    },
+    {
+      "id": "s-008",
+      "name": "Horizon Scaffolding",
+      "registrationNumber": "HRZ-8801",
+      "country": "UK",
+      "categories": ["Scaffolding"],
+      "complianceStatus": "NotVerified",
+      "createdAt": "2024-04-02T09:10:00Z"
+    },
+    {
+      "id": "s-009",
+      "name": "Iberia Glass & Glazing",
+      "registrationNumber": "IBR-9920",
+      "country": "ES",
+      "categories": ["Glazing"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-04-08T12:00:00Z"
+    },
+    {
+      "id": "s-010",
+      "name": "Joliet Facades",
+      "registrationNumber": "JLT-1013",
+      "country": "FR",
+      "categories": ["Facades", "Cladding"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-04-14T10:45:00Z"
+    },
+    {
+      "id": "s-011",
+      "name": "Kilkenny Insulation",
+      "registrationNumber": "KLK-1117",
+      "country": "IE",
+      "categories": ["Insulation"],
+      "complianceStatus": "Pending",
+      "createdAt": "2024-04-20T14:30:00Z"
+    },
+    {
+      "id": "s-012",
+      "name": "Lumen Lighting GmbH",
+      "registrationNumber": "LMN-1209",
+      "country": "DE",
+      "categories": ["Electrical", "Lighting"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-05-01T08:00:00Z"
+    },
+    {
+      "id": "s-013",
+      "name": "Meridian Groundworks",
+      "registrationNumber": "MRD-1303",
+      "country": "UK",
+      "categories": ["Groundworks", "Excavation"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-05-07T11:15:00Z"
+    },
+    {
+      "id": "s-014",
+      "name": "Nordpol Heating GmbH",
+      "registrationNumber": "NDP-1412",
+      "country": "DE",
+      "categories": ["Heating", "HVAC"],
+      "complianceStatus": "NotVerified",
+      "createdAt": "2024-05-12T13:45:00Z"
+    },
+    {
+      "id": "s-015",
+      "name": "Oakwood Carpentry",
+      "registrationNumber": "OAK-1501",
+      "country": "UK",
+      "categories": ["Carpentry", "Joinery"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-05-18T09:30:00Z"
+    },
+    {
+      "id": "s-016",
+      "name": "Pyrenees Plasterers",
+      "registrationNumber": "PYR-1608",
+      "country": "FR",
+      "categories": ["Plastering"],
+      "complianceStatus": "Pending",
+      "createdAt": "2024-05-25T12:20:00Z"
+    },
+    {
+      "id": "s-017",
+      "name": "Quintas Concrete",
+      "registrationNumber": "QNT-1710",
+      "country": "ES",
+      "categories": ["Concrete", "Formwork"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-06-01T10:00:00Z"
+    },
+    {
+      "id": "s-018",
+      "name": "Ravenhill Demolition",
+      "registrationNumber": "RVN-1821",
+      "country": "UK",
+      "categories": ["Demolition"],
+      "complianceStatus": "NotVerified",
+      "createdAt": "2024-06-07T15:10:00Z"
+    },
+    {
+      "id": "s-019",
+      "name": "Silva Landscaping",
+      "registrationNumber": "SLV-1904",
+      "country": "IE",
+      "categories": ["Landscaping", "Groundworks"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-06-13T11:00:00Z"
+    },
+    {
+      "id": "s-020",
+      "name": "Teutonia Steel",
+      "registrationNumber": "TTN-2007",
+      "country": "DE",
+      "categories": ["Steel", "Structural"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-06-20T09:45:00Z"
+    },
+    {
+      "id": "s-021",
+      "name": "Umbria Tiling",
+      "registrationNumber": "UMB-2115",
+      "country": "ES",
+      "categories": ["Tiling"],
+      "complianceStatus": "Pending",
+      "createdAt": "2024-06-25T14:00:00Z"
+    },
+    {
+      "id": "s-022",
+      "name": "Vanguard Drainage",
+      "registrationNumber": "VNG-2202",
+      "country": "UK",
+      "categories": ["Drainage", "Plumbing"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-07-02T08:30:00Z"
+    },
+    {
+      "id": "s-023",
+      "name": "Westmeath Paving",
+      "registrationNumber": "WST-2309",
+      "country": "IE",
+      "categories": ["Paving", "Groundworks"],
+      "complianceStatus": "NotVerified",
+      "createdAt": "2024-07-08T10:50:00Z"
+    },
+    {
+      "id": "s-024",
+      "name": "Xylos Timber Frames",
+      "registrationNumber": "XLS-2418",
+      "country": "FR",
+      "categories": ["Carpentry", "Timber"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-07-14T13:20:00Z"
+    },
+    {
+      "id": "s-025",
+      "name": "Yorkshire Brickworks",
+      "registrationNumber": "YRK-2506",
+      "country": "UK",
+      "categories": ["Masonry", "Brickwork"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-07-20T09:00:00Z"
+    },
+    {
+      "id": "s-026",
+      "name": "Zephyr HVAC Solutions",
+      "registrationNumber": "ZPH-2611",
+      "country": "UK",
+      "categories": ["HVAC", "Ventilation"],
+      "complianceStatus": "Pending",
+      "createdAt": "2024-07-28T11:40:00Z"
+    },
+    {
+      "id": "s-027",
+      "name": "Alpenbau GmbH",
+      "registrationNumber": "ALP-2703",
+      "country": "DE",
+      "categories": ["Building General"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-08-02T08:15:00Z"
+    },
+    {
+      "id": "s-028",
+      "name": "Bastille Electriques",
+      "registrationNumber": "BST-2814",
+      "country": "FR",
+      "categories": ["Electrical", "Fire Safety"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-08-08T14:25:00Z"
+    },
+    {
+      "id": "s-029",
+      "name": "Costa del Sol Paints",
+      "registrationNumber": "CST-2920",
+      "country": "ES",
+      "categories": ["Painting", "Decorating"],
+      "complianceStatus": "NotVerified",
+      "createdAt": "2024-08-15T12:10:00Z"
+    },
+    {
+      "id": "s-030",
+      "name": "Dublin Glazing Co",
+      "registrationNumber": "DBL-3005",
+      "country": "IE",
+      "categories": ["Glazing", "Windows"],
+      "complianceStatus": "Verified",
+      "createdAt": "2024-08-22T10:00:00Z"
+    }
+  ]
+}
