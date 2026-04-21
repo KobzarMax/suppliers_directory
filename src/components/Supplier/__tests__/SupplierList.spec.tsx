@@ -1,11 +1,10 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import { SupplierList } from "../SupplierList";
-import { useSuppliers } from "../../hooks/useSuppliers";
+import { SupplierList } from "../SupplierList/SupplierList";
+import { useSuppliers } from "../../../hooks/useSuppliers";
 
-// Mock the hook
-jest.mock("../../hooks/useSuppliers", () => ({
+jest.mock("../../../hooks/useSuppliers", () => ({
   useSuppliers: jest.fn(),
 }));
 
@@ -40,8 +39,17 @@ describe("SupplierList", () => {
       isLoading: true,
     });
 
-    renderWithRouter(<SupplierList query="" />);
-    expect(screen.getByText(/loading suppliers.../i)).toBeInTheDocument();
+    renderWithRouter(
+      <SupplierList 
+        query="" 
+        page={1} 
+        limit={10} 
+        onPageChange={jest.fn()} 
+        onLimitChange={jest.fn()} 
+      />
+    );
+    expect(screen.getByRole("status")).toBeInTheDocument();
+    expect(screen.getByLabelText(/loading/i)).toBeInTheDocument();
   });
 
   it("should render error state", () => {
@@ -50,27 +58,51 @@ describe("SupplierList", () => {
       error: new Error("Failed to load"),
     });
 
-    renderWithRouter(<SupplierList query="" />);
+    renderWithRouter(
+      <SupplierList 
+        query="" 
+        page={1} 
+        limit={10} 
+        onPageChange={jest.fn()} 
+        onLimitChange={jest.fn()} 
+      />
+    );
     expect(screen.getByText(/error: failed to load/i)).toBeInTheDocument();
   });
 
   it("should render empty state", () => {
     (useSuppliers as jest.Mock).mockReturnValue({
-      data: [],
+      data: { data: [], totalCount: 0 },
       isLoading: false,
     });
 
-    renderWithRouter(<SupplierList query="" />);
+    renderWithRouter(
+      <SupplierList 
+        query="" 
+        page={1} 
+        limit={10} 
+        onPageChange={jest.fn()} 
+        onLimitChange={jest.fn()} 
+      />
+    );
     expect(screen.getByText(/no suppliers found/i)).toBeInTheDocument();
   });
 
   it("should render list of suppliers", () => {
     (useSuppliers as jest.Mock).mockReturnValue({
-      data: mockSuppliers,
+      data: { data: mockSuppliers, totalCount: mockSuppliers.length },
       isLoading: false,
     });
 
-    renderWithRouter(<SupplierList query="" />);
+    renderWithRouter(
+      <SupplierList 
+        query="" 
+        page={1} 
+        limit={10} 
+        onPageChange={jest.fn()} 
+        onLimitChange={jest.fn()} 
+      />
+    );
 
     expect(screen.getByText("Supplier A")).toBeInTheDocument();
     expect(screen.getByText("Supplier B")).toBeInTheDocument();

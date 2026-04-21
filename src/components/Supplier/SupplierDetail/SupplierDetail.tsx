@@ -1,4 +1,7 @@
-import { useSupplier } from "../hooks/useSuppliers";
+import { useSupplier } from "../../../hooks/useSuppliers";
+import { getFlagEmoji } from "../../../utils/country";
+import Spinner from "../../Basic/Spinner/Spinner";
+import "./SupplierDetail.css";
 
 interface SupplierDetailProps {
   id: string;
@@ -8,7 +11,7 @@ export function SupplierDetail({ id }: SupplierDetailProps) {
   const { data: supplier, isLoading, isError, error } = useSupplier(id);
 
   if (isLoading) {
-    return <div className="loading-state">Loading supplier details...</div>;
+    return <Spinner />;
   }
 
   if (isError) {
@@ -35,7 +38,10 @@ export function SupplierDetail({ id }: SupplierDetailProps) {
         
         <div className="detail-item">
           <span className="label">Country:</span>
-          <span className="value">{supplier.country}</span>
+          <div className="value country-cell">
+            <span className="flag-emoji" aria-hidden="true">{getFlagEmoji(supplier.country)}</span>
+            <span className="country-code">{supplier.country}</span>
+          </div>
         </div>
         
         <div className="detail-item">

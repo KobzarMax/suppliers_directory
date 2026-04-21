@@ -1,5 +1,6 @@
-import { useParams, Link } from "react-router-dom";
-import { SupplierDetail } from "../components/SupplierDetail";
+import { useParams } from "react-router-dom";
+import { SupplierDetail } from "@/components/Supplier/SupplierDetail/SupplierDetail";
+import BackLink from "@/components/Basic/BackLink/BackLink";
 
 export function SupplierDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -10,9 +11,7 @@ export function SupplierDetailPage() {
 
   return (
     <div className="supplier-detail-page">
-      <Link to="/" className="back-link">
-        &larr; Back to Directory
-      </Link>
+      <BackLink path="/" />
       <SupplierDetail id={id} />
     </div>
   );

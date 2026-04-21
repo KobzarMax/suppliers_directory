@@ -1,10 +1,9 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { SupplierForm } from "../SupplierForm";
-import { useCreateSupplier } from "../../hooks/useSuppliers";
+import { SupplierForm } from "../SupplierForm/SupplierForm";
+import { useCreateSupplier } from "../../../hooks/useSuppliers";
 
-// Mock the hook
-jest.mock("../../hooks/useSuppliers", () => ({
+jest.mock("../../../hooks/useSuppliers", () => ({
   useCreateSupplier: jest.fn(),
 }));
 
@@ -28,7 +27,7 @@ describe("SupplierForm", () => {
     render(<SupplierForm onSuccess={mockOnSuccess} onCancel={mockOnCancel} />);
     
     const submitButton = screen.getByRole("button", { name: /create supplier/i });
-    fireEvent.click(submitButton);
+    await userEvent.click(submitButton);
 
     expect(await screen.findByText(/name must be at least 2 characters/i)).toBeInTheDocument();
     expect(await screen.findByText(/please select a country/i)).toBeInTheDocument();
@@ -42,7 +41,7 @@ describe("SupplierForm", () => {
     await userEvent.type(regInput, "abc"); // Too short and lowercase
     
     const submitButton = screen.getByRole("button", { name: /create supplier/i });
-    fireEvent.click(submitButton);
+    await userEvent.click(submitButton);
 
     expect(await screen.findByText(/invalid registration number format/i)).toBeInTheDocument();
   });
@@ -55,7 +54,7 @@ describe("SupplierForm", () => {
     await userEvent.selectOptions(screen.getByLabelText(/country/i), "UK");
     await userEvent.type(screen.getByLabelText(/categories/i), "Electronics, Software");
     
-    fireEvent.click(screen.getByRole("button", { name: /create supplier/i }));
+    await userEvent.click(screen.getByRole("button", { name: /create supplier/i }));
 
     await waitFor(() => {
       expect(mockMutate).toHaveBeenCalledWith(
@@ -70,10 +69,10 @@ describe("SupplierForm", () => {
     });
   });
 
-  it("should call onCancel when cancel button is clicked", () => {
+  it("should call onCancel when cancel button is clicked", async () => {
     render(<SupplierForm onSuccess={mockOnSuccess} onCancel={mockOnCancel} />);
     
-    fireEvent.click(screen.getByRole("button", { name: /cancel/i }));
+    await userEvent.click(screen.getByRole("button", { name: /cancel/i }));
     expect(mockOnCancel).toHaveBeenCalled();
   });
 });

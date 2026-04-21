@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Plus } from "lucide-react";
+import "./Header.css";
 
 export default function Header() {
   return (
